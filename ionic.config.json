@@ -1,0 +1,7 @@
+{
+  "name": "sococim",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
