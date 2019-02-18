@@ -1,12 +1,102 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-toolbar color="light">
+      <ion-grid>
+          <ion-row>
+              <ion-col>
+                  <img height="90" [src]="logo">
+              </ion-col>
+              <ion-col>
+                  <ion-title color="success">
+                      {{nom|uppercase}}
+                  </ion-title>
+                  <ion-item>
+                      {{focus}}
+                  </ion-item>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+
+    <h2 text-center style="color:#A1C434;font-weight: bold;text-decoration: underline">
+        Faites votre choix
+    </h2>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">A PROPOS</h4>
+                <a (click)="openPage('presentation')">
+                    <img height="70" width="100" src="assets/images/presentation.png">
+                </a>
+            </ion-col>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">PRODUITS</h4>
+                <a (click)="openPage('produit')">
+                    <img height="70" width="100" src="assets/images/ciment.png">
+                </a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">COMMANDER</h4>
+                <a (click)="openPage('commande')">
+                    <img height="70" width="100" src="assets/images/commande.jpg">
+                </a>
+            </ion-col>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">FONDATION</h4>
+                <a (click)="openPage('fondation')">
+                    <img height="70" width="100" src="assets/images/sococim_fund.png">
+                </a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">DISTRIBUTEUR</h4>
+                <a (click)="openPage('distributeur')">
+                    <img height="70" width="100" src="assets/images/distributeur.png">
+                </a>
+            </ion-col>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">ACTUALITE</h4>
+                <a (click)="openPage('actualite')">
+                    <img height="70" width="100" src="assets/images/actualite.png">
+                </a>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">RSE</h4>
+                <a (click)="openPage('rse')">
+                    <img height="70" width="100" src="assets/images/rse.png">
+                </a>
+            </ion-col>
+            <ion-col>
+                <h4 text-center style="color:#A1C434;">CONTACT</h4>
+                <a (click)="openPage('contact')">
+                    <img height="70" width="100" src="assets/images/contact.png">
+                </a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <h2 text-center style="color:#A1C434;font-weight: bold;text-decoration: underline">
+        Sococim en image
+    </h2>
+
+    <ion-slides pager="true" [options]="{effect:'flip',autoplay:true,loop:true}">
+        <ion-slide>
+            <img src="assets/images/environnement.jpg">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/images/presentation.jpg">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/images/realisations.jpg">
+        </ion-slide>
+    </ion-slides>
+
 </ion-content>

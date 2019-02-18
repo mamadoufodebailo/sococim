@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <a (click)="goPageBack()">
+          <img height="90" [src]="logo">
+        </a>
+      </ion-col>
+      <ion-col>
+        <ion-title color="success">
+          {{nom|uppercase}}
+        </ion-title>
+        <ion-item>
+          {{focus}}
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-icon (click)="goPageBack()" name="arrow-round-back" slot="icon-only"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+    <ion-card>
+        <ion-card-title>
+          <h3 style="color:#A1C434;font-weight: bold;text-decoration: underline"
+              text-center="">Outil industriel</h3>
+        </ion-card-title>
+
+      <ion-card-content>
+
+        <img src="assets/images/cuisson.jpg" width="auto">
+
+        <h4 style="color:green;font-weight: bold;text-decoration: underline"
+            text-center="" text-wrap="">
+          SOCOCIM Industries une nouvelle ligne de cuisson.
+        </h4>
+
+        <p text-wrap="">
+          La ligne de cuisson de 3 500 tonnes/jour porte la capacité de l’usine de Ruﬁsque à plus de 3,5 millions de tonnes.
+          Cette unité de production permet de répondre
+          à la demande soutenue du pays et de conﬁrmer la position de leader de SOCOCIM Industries sur le marché Ouest africain.
+        </p>
+
+        <h4 style="color:green;font-weight: bold;text-decoration: underline"
+            text-center="" text-wrap="">
+          Équipements
+        </h4>
+
+        <p text-wrap="">
+          Broyeur cru vertical Polysius de 270 t/h
+          Hall de préhomogénéisation revu avec deux gratteurs (2 x 600 t/h) Claudius Peters et un jeteur (1 200 t/h) Bedeschi
+          Filtre à manches redecam haute température avec une surface filltrante de 10 000 m²
+          Silo d’homogénéisation Polysius de 11 000 t
+          Préchauffeur Polysius à double colonne et 5 étages
+          Four rotatif de 4,2 m de diamètre et 64 m de longueur
+          Refroidisseur Polysius de dernière génération
+          Silo de stockage clinker de 60 000 t
+          Extraction clinker
+          Système de convoyage généralisé pour limiter les émissions de poussières diffuses.
+
+          Le pilotage de l’usine est assuré à partir d’une salle de contrôle de dernière génération permettant une optimisation
+          du suivi des consommations et des émissions tout en assurant une production régulière et un suivi qualité performant.
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+</ion-content>

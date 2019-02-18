@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <a (click)="goToPageBack()">
+          <img height="90" [src]="logo">
+        </a>
+      </ion-col>
+      <ion-col>
+        <ion-title color="success">
+          {{nom|uppercase}}
+        </ion-title>
+        <ion-item>
+          {{focus}}
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list padding>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-icon (click)="goToPageBack()" name="arrow-round-back" slot="icon-only"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-item>
+      <header>
+        <h4 style="color: #A1C434;">NOUS CONTACTER</h4>
+
+        <h5 style="color: green;">SOCOCIM Industries</h5>
+
+        <p>Km 33 ancienne route de Thiès, Rufisque – Sénégal.</p>
+        <p>Standard : +221 33 839 88 88,</p>
+
+        <h5 style="color: green;">Direction commerciale</h5>
+        <p>Rond-point Sococim (Bata) Rufisque</p>
+        <p>Tél. : + 221 33 839 88 60</p>
+
+        <h5 style="color: green;">Commandes locales</h5>
+        <p>Tél. : +221 33 839 88 61</p>
+
+        <h5 style="color: green;">Commande export</h5>
+        <p>Tél. : +221 33 839 88 56</p>
+        <p>Fax : +221 33 839 88 99</p>
+        <p>Email : commercial@sococim.sn</p>
+
+      </header>
+    </ion-item>
+
+    <form #f="ngForm" (ngSubmit)="addContact(f.value)">
+      <ion-item>
+        <ion-label>Prénom</ion-label>
+        <ion-input required="=required" name="prenom" [(ngModel)]="contact.prenom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nom</ion-label>
+        <ion-input required="=required" name="nom" [(ngModel)]="contact.nom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input required="=required" name="email" [(ngModel)]="contact.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Téléphone</ion-label>
+        <ion-input required="=required" name="telephone" [(ngModel)]="contact.telephone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Message</ion-label>
+        <ion-textarea required="=required" name="message" [(ngModel)]="contact.message"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{message}}</ion-label>
+      </ion-item>
+
+      <ion-button type="submit" [disabled]="!f.valid" expand="full">Soumettre</ion-button>
+    </form>
+
+  </ion-list>
+
+</ion-content>
